@@ -1,0 +1,135 @@
+:root {
+    --primary-soft-blue: hsl(215, 51%, 70%);
+    --primary-cyan: hsl(178, 100%, 50%);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+  }
+
+  * {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-bg);
+    height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: var(--card-bg);
+    border-radius: 20px;
+    width: 350px;
+    height: 565px;
+  }
+
+  .card__body {
+    position: relative;
+    margin: 25px;
+    bottom: 40px;
+  }
+
+  .card__days-left {
+    color: var(--primary-soft-blue);
+    font-weight: 300;
+  }
+
+  .card__divider {
+    border-top: solid 1px var(--line);
+    width: 300px;
+    margin-block: 15px;
+  }
+
+  .card__image {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .card__image:hover {
+    cursor: pointer;
+    filter: blur(1px) contrast(50%);
+    opacity: 1;
+  }
+
+  .card__price {
+    color: var(--primary-cyan);
+    font-weight: 600;
+  }
+
+  .card__pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 15px;
+  }
+
+  .card__text {
+    color: var(--primary-soft-blue);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .card__title {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .card__title:hover {
+    cursor: pointer;
+  }
+
+  .author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .author__avatar--sm {
+    width: 32px;
+    height: 32px;
+    border: solid 1px var(--white);
+    border-radius: 100%;
+    margin-inline-end: 15px;
+  }
+
+  .author__text {
+    color: var(--white);
+    margin-inline: 2px;
+  }
+
+  .author__text:hover {
+    cursor: pointer;
+  }
+
+  .author__text--colorized {
+    color: var(--primary-soft-blue);
+  }
+
+  .overlay {
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+  }
+
+  .container:hover .overlay {
+    opacity: 1;
+  }
