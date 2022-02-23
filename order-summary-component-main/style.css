@@ -1,0 +1,137 @@
+:root {
+    /* Primary */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    /* Neutral */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* body {
+    font-family: 'Red Hat Display', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: var(--pale-blue) url(./images/pattern-background-desktop.svg) no-repeat top/100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    height: 45px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.button--contained {
+    background: var(--bright-blue);
+    color: var(--pale-blue);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, .3);
+}
+
+.button--contained:hover {
+    background: hsl(224, 75%, 55%);
+}
+
+.button--text {
+    border: none;
+    background: transparent;
+    text-align: center;
+    color: var(--desaturated-blue);
+}
+
+.button--text:hover {
+    color: var(--dark-blue);
+}
+
+.button--sm {
+    height: 25px;
+    color: var(--bright-blue);
+}
+
+.button--sm:hover {
+    color: hsl(224, 75%, 55%);
+    border: none;
+}
+
+.container {
+    background: white;
+    width: 350px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+.container__body {
+    margin: 25px;
+}
+
+.container__controls {
+    display: flex;
+    flex-direction: column;
+}
+
+.container__image {
+    border-radius: 15px 15px 0px 0px;
+    width: 100%;
+}
+
+.container__text {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--desaturated-blue);
+    margin: 15px;
+}
+
+.container__title {
+    font-weight: 900;
+    font-size: 25px;
+    margin: 15px;
+    color: var(--dark-blue);
+}
+
+.plan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 40px;
+    padding: 15px;
+    background: var(--very-pale-blue);
+    border-radius: 10px;
+}
+
+.plan__button {
+    border-bottom: solid 1px;
+}
+
+.plan__icon {
+    margin-right: -30px;
+}
+
+.plan__text {}
+
+.plan__text--top {
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.plan__text--bottom {
+    font-weight: 500;
+    color: var(--desaturated-blue);
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        background: var(--pale-blue) url(./images/pattern-background-mobile.svg) no-repeat top/100%;
+    }
+}

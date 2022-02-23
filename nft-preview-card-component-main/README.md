@@ -93,6 +93,6 @@ to make the hover state in the image create a container and center its content, 
 
 ## Author
 
-- Website - Joel Avilés
+- Joel Avilés
 - Frontend Mentor - [@Appithe](https://www.frontendmentor.io/profile/Appithe)
 - Twitter - [@joelaviles413](https://twitter.com/joelaviles413)
