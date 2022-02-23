@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://appithe.github.io/Frontend-Mentor/order-summary-component-main/)
+- Solution URL: [Github Pages](https://appithe.github.io/Frontend-Mentor/order-summary-component-main/)
 
 ## My process
 
