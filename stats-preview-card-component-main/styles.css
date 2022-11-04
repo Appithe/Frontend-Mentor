@@ -56,6 +56,8 @@ body {
     background: var(--DarkDesaturatedBlue);
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: min-content;
     border-radius: 10px;
 }
@@ -70,16 +72,6 @@ body {
 
 .card__heading {
     font-size: 30px;
-}
-
-.card__image {
-    height: 525px;
-    width: 630px;
-    border-radius: 0px 10px 10px 0px;
-    background: linear-gradient(var(--SlightlyTransparentWhiteHeading), var(--SlightlyTransparentWhiteHeading)), url("./images/image-header-desktop.jpg");
-    background: linear-gradient(rgb(170, 92, 219, .5), rgb(170, 92, 219, .5)), url("./images/image-header-desktop.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .card__main {
@@ -97,56 +89,77 @@ body {
     justify-content: space-between;
 }
 
-/* TODO: create media queries to mobile design */
+.overlay {
+    height: 525px;
+    width: 630px;
+    position: relative;
+}
+
+.overlay::after {
+    content: '';
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    position: absolute;
+    background: var(--DarkDesaturatedBlue);
+    opacity: 0.5;
+}
+
+.overlay__image {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    position: absolute;
+    border-radius: 0px 10px 10px 0px;
+}
+
 @media (max-width: 375px) {
 
-    .heading {}
-    
-    .heading--accent {}
-    
-    .paragraph {
-        text-align: center;
-    }
-    
-    .stat {}
-    
     .card {
         display: flex;
         flex-direction: column-reverse;
-        align-items: center;
-        height: 525px;
-        width: 300px;
+        height: 900px
     }
-    
-    .card__body {
-        padding: 20px;
-        width: 300px;
-        margin: auto;
+
+    .card__main {
+        margin-top: 20px;
     }
-    
-    .card__heading {
-        font-size: 24px;
+
+    .card__body { 
+        width: 300px;
+        margin-right: 0px;
         text-align: center;
     }
-    
-    .card__image {
-        height: 525px;
-        width: 300px;
-        border-radius: 10px 10px 0px 0px;
-    }
-    
-    .card__main {
-        margin-top: 40px;
-    }
-    
-    .card__stat .heading {
-        font-size: 25px;
-    }
-    
+
     .card__stats {
         display: flex;
         flex-direction: column;
-        align-self: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .card__heading {
+        font-size: 20px;
+    }
+    
+    .paragraph {
+        line-height: 15px;
+    }
+
+    .overlay {
+        height: -webkit-fill-available;
+        width: -webkit-fill-available;
+        position: relative;
+    }
+
+    .overlay::after {
+        content: '';
+        height: -webkit-fill-available;
+        width: -webkit-fill-available;
+        position: absolute;
+    }
+
+    .overlay__image {
+        border-radius: 10px 10px 0px 0px;
     }
 
 }
